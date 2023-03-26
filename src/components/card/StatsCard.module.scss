@@ -1,0 +1,68 @@
+@import '@/styles/_variables';
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.stats-card {
+    background-color: $white-clr;
+    padding: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    .icon {
+        padding: 10px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    .repos {
+        color: #da4a91;
+        background-color: #ffe0f0;
+    }
+
+    .followers {
+
+        color: #2caeba;
+        background-color: #e6e6ff;
+    }
+
+    .following {
+        color: #5d55fa;
+        background-color: #e6e6ff;
+    }
+
+    .gists {
+        color: #f0b429;
+        background-color: #fffbea;
+    }
+
+    .info {
+        width: 100%;
+        text-align: center;
+
+        h3 {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

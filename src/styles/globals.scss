@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+    background-color: $bg-clr;
+    font-weight: 400;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: $primary-clr;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+
+/*=============== 
+Spinner
+================*/
+
+.spinner-container {
+    position: relative;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+    // margin-top: 10rem;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: $primary-clr;
+    animation: spinner 0.6s linear infinite;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $white-clr;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $grey-clr2;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) /
+@media only screen and (max-width: 600px) {...}
+
+/ Small devices (portrait tablets and large phones, 600px and up) /
+@media only screen and (min-width: 600px) {...}
+
+/ Medium devices (landscape tablets, 768px and up) /
+@media only screen and (min-width: 768px) {...}
+
+/ Large devices (laptops/desktops, 992px and up) /
+@media only screen and (min-width: 992px) {...}
+
+/ Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (max-width: 1200px) {
+    .container{
+        width: 1170px;
+    }
+} */

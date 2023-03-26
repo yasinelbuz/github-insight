@@ -1,0 +1,108 @@
+@import '@/styles/_variables';
+
+.search {
+    margin-top: 6rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: center;
+
+    form {
+        padding: 0.8rem;
+        border-radius: 5px;
+        background-color: $text-light-clr;
+        grid-column: 1/4;
+
+        .search-area {
+            display: flex;
+            align-items: center;
+
+            svg {
+                width: 2.5rem;
+                height: 2.5rem;
+                margin-right: 5px;
+                color: $grey-clr;
+            }
+
+            input {
+                flex: 1;
+                height: 3.6rem;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                padding: 1rem;
+                margin-right: 1rem;
+                font-size: 1.6rem;
+
+                &:focus {
+                    border: 1px solid rgba(172, 172, 172, 0.39);
+                }
+            }
+
+            button {
+                height: 3.6rem;
+                padding: 0 2rem;
+                background-color: $primary-clr;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                color: $text-light-clr;
+                font-size: 1.8rem;
+
+                &:hover {
+                    color: $text-dark-clr;
+                    background-color: $hover-clr;
+                }
+            }
+        }
+    }
+
+    .h3 {
+        font-size: 2.8rem;
+        text-align: left;
+        color: $grey-clr;
+        font-weight: 400;
+    }
+}
+
+.error {
+    color: red;
+    padding: 3px 0;
+	font-size: 1.4rem;
+	position: absolute;
+}
+
+@media (max-width: 1200px) {
+    .search {
+        .h3 {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .search {
+        grid-template-columns: repeat(5, 1fr);
+
+        form {
+            grid-column: 1/4;
+        }
+
+        .h3 {
+            grid-column: 4/6;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .search {
+        grid-template-columns: 1fr;
+
+        form,
+        .h3 {
+            grid-column: unset;
+        }
+    }
+}
