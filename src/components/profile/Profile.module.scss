@@ -32,6 +32,15 @@
 	&::before {
 		content: "Followers";
 	}
+	button {
+		background-color: $primary-clr;
+		color: #fff;
+		border: 0;
+		padding: 1rem;
+		cursor: pointer;
+		border-radius: 3rem;
+		margin-top: 10px;
+	}
 }
 
 .user {
