@@ -28,6 +28,7 @@ export default function HomeContainer() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
             {!isLoading && <main>
                 <Header />
                 <StatsCard data={data} />
