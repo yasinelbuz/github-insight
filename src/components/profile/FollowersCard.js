@@ -6,26 +6,23 @@ import { useGetGithubUserByFollowersQuery } from '@/services/githubUser';
 import { setPage } from '@/redux/usersSlice';
 
 const FollowersCard = () => {
-    const { searchUser, items, page } = useSelector(state => state.users)
+    const { searchUser, followers, page } = useSelector(state => state.users)
     const { data, isLoading, isFetching, isSuccess } = useGetGithubUserByFollowersQuery({ name: searchUser, page }, {
         refetchOnMountOrArgChange: true,
     });
     const dispatch = useDispatch();
 
-    const handleScroll = () => {
+    const loadFollowers = () => {
         if (isSuccess) {
-            const { offsetHeight, scrollHeight, scrollTop } = divRef.current;
-
-            if (offsetHeight + scrollTop === scrollHeight)
-                dispatch(setPage(1))
+            dispatch(setPage(1))
         }
     }
 
     return (
         <div className={`${styles.card} ${styles['followers-card']}`}>
             {!isLoading && <div className={styles.followers}>
-                {items?.map(followers => <Follower key={followers.id} followers={followers} />)}
-                {(data.length != 0 && items.length == 50) && <button onClick={handleScroll}>
+                {followers?.map(followers => <Follower key={followers.id} followers={followers} />)}
+                {(data.length != 0 && followers.length == 50) && <button onClick={loadFollowers}>
                     {isFetching ? "Fetching..." : "Go on"}
                 </button>}
             </div>}

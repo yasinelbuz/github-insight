@@ -3,7 +3,7 @@ import { githubApi } from '@/services/githubUser';
 
 const initialState = {
    searchUser: "yasinelbuz",
-   items: [],
+   followers: [],
    page: 1,
 }
 
@@ -13,11 +13,11 @@ export const usersSlice = createSlice({
    reducers: {
       setSearchUser: function (state, action) {
          state.searchUser = action.payload;
-         state.items = [];
+         state.followers = [];
          state.page = 1;
       },
       setItems: function (state, action) {
-         state.items = action.payload;
+         state.followers = action.payload;
       },
       setPage: function (state, action) {
          state.page += action.payload;
@@ -27,7 +27,7 @@ export const usersSlice = createSlice({
       builder.addMatcher(
          githubApi.endpoints.getGithubUserByFollowers.matchFulfilled,
          (state, action) => {
-            state.items = [...state.items, ...action.payload];
+            state.followers = [...state.followers, ...action.payload];
          }
       );
    },
