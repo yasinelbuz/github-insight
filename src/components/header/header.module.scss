@@ -1,5 +1,44 @@
+@import "@/styles/_variables";
+
 .header {
+	background-image: url("https://images.pexels.com/photos/3684396/pexels-photo-3684396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-color: #dae4ed;
-	padding: 50px;
+	padding: 150px;
 	margin-bottom: 4rem;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.2);
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.6979166666666667) 0%,
+			rgba(255, 255, 255, 0.1186449579831933) 100%
+		);
+		z-index: 0;
+	}
+
+	nav.navigation {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		gap: 1rem;
+		margin-bottom: 1rem;
+		a {
+			background-color: $primary-clr;
+			padding: 5px 10px;
+			border-radius: 20px;
+			color: #fff;
+			&:hover {
+				background-color: $hover-clr;
+				padding: 5px 10px;
+				border-radius: 20px;
+			}
+		}
+	}
 }
