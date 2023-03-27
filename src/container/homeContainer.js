@@ -10,6 +10,7 @@ const NextFusionCharts = dynamic(
 );
 import { useGetGithubUserByNameQuery, useGetGithubUserByFollowersQuery, useGetGithubUserByReposQuery } from '@/services/githubUser';
 import { useSelector } from 'react-redux';
+import Header from '@/components/header/header';
 
 export default function HomeContainer() {
     const { searchUser } = useSelector((state) => state.users);
@@ -28,7 +29,7 @@ export default function HomeContainer() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             {!isLoading && <main>
-                <Search isError={isError} />
+                <Header />
                 <StatsCard data={data} />
                 <Profile data={data} />
                 <NextFusionCharts reposData={reposData} />
