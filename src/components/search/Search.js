@@ -15,7 +15,7 @@ const Search = ({ isError }) => {
     };
 
     return (
-        <section>
+        <div>
             <div className="container">
                 <div className={styles.search}>
                     <form>
@@ -31,12 +31,11 @@ const Search = ({ isError }) => {
                             </button>
                         </div>
                     </form>
-                    <h3 className={styles.h3}>requests : 56 / 60</h3>
                 </div>
-                
+
                 {isError ? <p className={styles.error}>There Is No User With That Username</p> : <p className={styles.error}></p>}
             </div>
-        </section>
+        </div>
     );
 };
 
