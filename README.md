@@ -4,15 +4,15 @@ _"Github Info”_
 
 They can view their profile information, number of followers and followed users, public and private projects, repo names, star ratings, and recent activity on GitHub.
 
-- [Demo](#demo)
-- [Installation](#installation)
-- [Starting project](#starting-project)
-- [Links](#links)
-- [Contact](#contact)
+-   [Demo](#demo)
+-   [Installation](#installation)
+-   [Starting project](#starting-project)
+-   [Links](#links)
+-   [Contact](#contact)
 
 ## Demo
---
 
+## ![githubInfo web](https://github.com/yasinelbuz/github-info/blob/master/github-info.png)
 
 ## Installation
 
@@ -36,8 +36,9 @@ http://localhost:3000
 
 ## Links
 
-- [Github](https://github.com/yasinelbuz/github-info)
-- [Deployment](https://choose-the-right.vercel.app/)
+-   [Github](https://github.com/yasinelbuz/github-info)
+-   [Deployment](https://github-info-y4jz.vercel.app/)
 
 ## Contact
+
 You can contact me at yasinelbuz@gmail.com
