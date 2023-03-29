@@ -1,7 +1,7 @@
 import React from 'react';
 import StatsCardItem from './StatsCartdtem';
 import { Repos, Followers, Following, Gists } from '@/icons/icons'
-import styles from './StatsCard.module.scss'
+import styles from '@/components/card/stats/styles/StatsCard.module.scss'
 
 const StatsCard = ({ data }) => {
     return (

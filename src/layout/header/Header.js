@@ -2,7 +2,7 @@ import React from "react";
 import styles from './header.module.scss';
 import Search from "@/components/search/Search";
 import Link from "next/link";
-import { useGetRateLimitQuery } from "@/services/githubUser";
+import { useGetRateLimitQuery } from "@/services/rate";
 
 export default function Header() {
 

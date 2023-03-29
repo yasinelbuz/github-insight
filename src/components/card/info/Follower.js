@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Profile.module.scss';
+import styles from '@/components/card/info/styles/Profile.module.scss';
 const Follower = ({ followers }) => {
     return (
         <article>

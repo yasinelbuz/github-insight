@@ -1,13 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
-import StatsCard from '@/components/card/StatsCard';
-import Profile from '@/components/profile/Profile';
+import StatsCard from '@/components/card/stats/StatsCard';
+import Profile from '@/components/card/info/Profile';
 const NextFusionCharts = dynamic(
-    () => import('@/components/fusioncharts/NextFusionChart'),
+    () => import('@/components/fusioncharts/FusionChart'),
     { ssr: false }
 );
-import { useGetGithubUserByNameQuery, useGetGithubUserByFollowersQuery, useGetGithubUserByReposQuery } from '@/services/githubUser';
+import { useGetGithubUserByNameQuery, useGetGithubUserByFollowersQuery, useGetGithubUserByReposQuery } from '@/services/users';
 import { useSelector } from 'react-redux';
 
 export default function HomeContainer() {

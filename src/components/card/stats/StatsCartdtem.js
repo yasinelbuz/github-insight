@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './StatsCard.module.scss'
+import styles from '@/components/card/stats/styles/StatsCard.module.scss'
 
 const StatsCardItem = ({ icon, text, num }) => {
 

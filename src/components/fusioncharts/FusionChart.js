@@ -9,10 +9,11 @@ import {
     forkedReposConfigs,
     starsConfigs,
     starsPerLangConfigs,
-} from './configs';
+} from '@/data/fusion-configs';
 
-import { sortData, findLanguageData } from '@/helper/helper';
-import styles from './Charts.module.scss';
+import { sortData } from '@/helper/sortData';
+import { findLanguageData } from '@/helper/findLanguageData';
+import styles from '@/components/fusioncharts/styles/Charts.module.scss';
 
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 

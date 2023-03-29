@@ -1,8 +1,8 @@
 import React from 'react';
 import Follower from './Follower';
-import styles from './Profile.module.scss';
+import styles from '@/components/card/info/styles/Profile.module.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { useGetGithubUserByFollowersQuery } from '@/services/githubUser';
+import { useGetGithubUserByFollowersQuery } from '@/services/users';
 import { setPage } from '@/redux/usersSlice';
 
 const FollowersCard = () => {

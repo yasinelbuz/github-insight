@@ -1,8 +1,8 @@
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-export const githubApi = createApi({
-   reducerPath: 'githubApi',
+export const usersApi = createApi({
+   reducerPath: 'usersApi',
    baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API }),
    endpoints: (build) => ({
       getGithubUserByName: build.query({
@@ -20,4 +20,4 @@ export const githubApi = createApi({
    }),
 })
 
-export const { useGetGithubUserByNameQuery, useGetGithubUserByFollowersQuery, useGetGithubUserByReposQuery, useGetRateLimitQuery } = githubApi
+export const { useGetGithubUserByNameQuery, useGetGithubUserByFollowersQuery, useGetGithubUserByReposQuery } = usersApi

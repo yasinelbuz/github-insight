@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { githubApi } from '@/services/githubUser';
+import { usersApi } from '@/services/users';
 
 const initialState = {
    searchUser: "yasinelbuz",
@@ -25,7 +25,7 @@ export const usersSlice = createSlice({
    },
    extraReducers: (builder) => {
       builder.addMatcher(
-         githubApi.endpoints.getGithubUserByFollowers.matchFulfilled,
+         usersApi.endpoints.getGithubUserByFollowers.matchFulfilled,
          (state, action) => {
             state.followers = [...state.followers, ...action.payload];
          }
