@@ -26,9 +26,9 @@ const UserCard = ({ data }) => {
                     </header>
                     <p className={styles.bio}>{data?.bio}</p>
                     <div className={styles['user-info']}>
-                        {showUserInfo(data.company, Company)}
-                        {showUserInfo(data.location, Location)}
-                        {showUserInfo(data.blog, LinkIcon)}
+                        {showUserInfo(data?.company, Company)}
+                        {showUserInfo(data?.location, Location)}
+                        {showUserInfo(data?.blog, LinkIcon)}
                     </div>
                 </article>
             </div>
