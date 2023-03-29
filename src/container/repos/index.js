@@ -28,7 +28,7 @@ export default function ReposContainer() {
       repo.fork ? "Yes" : "No",
       repo.created_at.slice(0, 10),
       <a href={repo.html_url} style={{ color: "#000", textDecoration: "underline" }} target="_blank">Repo</a>,
-   ]))
+   ]));
 
    return <>
       <main>
