@@ -3,6 +3,9 @@ import styles from '@/components/card/info/styles/Profile.module.scss';
 import { Company, LinkIcon, Location } from '@/icons/icons';
 
 const UserCard = ({ data }) => {
+
+    const showUserInfo = (name, IconComponent) => name && <p> <IconComponent /> {name} </p>
+
     return (
         <div className={`${styles.card}`}>
             <div className={styles.user}>
@@ -23,26 +26,9 @@ const UserCard = ({ data }) => {
                     </header>
                     <p className={styles.bio}>{data?.bio}</p>
                     <div className={styles['user-info']}>
-                        {data?.company && (
-                            <p>
-                                <Company />
-                                {data?.company}
-                            </p>
-                        )}
-                        {data?.location && (
-                            <p>
-                                <Location />
-                                {data?.location}
-                            </p>
-                        )}
-                        {data?.blog && (
-                            <p>
-                                <a href={`https://www.${data?.blog}`}>
-                                    <LinkIcon />
-                                    {data?.blog}
-                                </a>
-                            </p>
-                        )}
+                        {showUserInfo(data.company, Company)}
+                        {showUserInfo(data.location, Location)}
+                        {showUserInfo(data.blog, LinkIcon)}
                     </div>
                 </article>
             </div>
