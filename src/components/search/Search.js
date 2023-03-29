@@ -11,7 +11,7 @@ const Search = ({ isError }) => {
     const handleSearch = (e) => {
         e.preventDefault();
         let searchValue = searchRef.current.value;
-        dispatch(setSearch(searchValue));
+        searchValue.trim() && dispatch(setSearch(searchValue.trim()));
     };
 
     return (
