@@ -11,9 +11,9 @@ import { useGetGithubUserByNameQuery, useGetGithubUserByFollowersQuery, useGetGi
 import { useSelector } from 'react-redux';
 
 export default function HomeContainer() {
-    const { searchUser } = useSelector((state) => state.users);
-    const { data, isError } = useGetGithubUserByNameQuery(searchUser);
-    const { data: reposData, isLoading } = useGetGithubUserByReposQuery(searchUser);
+    const { search } = useSelector((state) => state.users);
+    const { data, isError } = useGetGithubUserByNameQuery(search);
+    const { data: reposData, isLoading } = useGetGithubUserByReposQuery(search);
 
     return (
         <>

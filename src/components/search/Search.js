@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { SearchIcon } from '@/icons/icons.js';
 import styles from '@/components/search/styles/Search.module.scss';
 import { useDispatch } from 'react-redux';
-import { setSearchUser } from '@/redux/usersSlice';
+import { setSearch } from '@/redux/usersSlice';
 
 const Search = ({ isError }) => {
     const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const Search = ({ isError }) => {
     const handleSearch = (e) => {
         e.preventDefault();
         let searchValue = searchRef.current.value;
-        dispatch(setSearchUser(searchValue));
+        dispatch(setSearch(searchValue));
     };
 
     return (

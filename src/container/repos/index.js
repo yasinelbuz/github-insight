@@ -6,8 +6,8 @@ import { useSelector } from "react-redux";
 
 export default function ReposContainer() {
 
-   const { searchUser } = useSelector(state => state.users);
-   const { data: repos, isLoading, isSuccess, isFetching } = useGetGithubUserByReposQuery(searchUser);
+   const { search } = useSelector(state => state.users);
+   const { data: repos, isLoading } = useGetGithubUserByReposQuery(search);
 
    return <>
       <main>

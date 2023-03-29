@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import { usersApi } from '@/services/users';
 
 const initialState = {
-   searchUser: "yasinelbuz",
+   search: "yasinelbuz",
    followers: [],
    page: 1,
 }
@@ -11,8 +11,8 @@ export const usersSlice = createSlice({
    name: 'users',
    initialState,
    reducers: {
-      setSearchUser: function (state, action) {
-         state.searchUser = action.payload;
+      setSearch: function (state, action) {
+         state.search = action.payload;
          state.followers = [];
          state.page = 1;
       },
@@ -34,6 +34,6 @@ export const usersSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setSearchUser, setItems, setPage } = usersSlice.actions
+export const { setSearch, setItems, setPage } = usersSlice.actions
 
 export default usersSlice.reducer
