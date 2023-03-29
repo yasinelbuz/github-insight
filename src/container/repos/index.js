@@ -19,7 +19,7 @@ export default function ReposContainer() {
       { name: 'Repo url' },
    ];
 
-   const tableBody = repos.map(repo => ([
+   const tableBody = repos?.map(repo => ([
       <a href={repo.html_url} style={{ color: "#000", textDecoration: "underline" }} target="_blank">{repo.name}</a>,
       repo.description,
       repo.stargazers_count,
