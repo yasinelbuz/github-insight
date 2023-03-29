@@ -22,7 +22,7 @@ const FollowersCard = () => {
         <div className={`${styles.card} ${styles['followers-card']}`}>
             {!isLoading && <div className={styles.followers}>
                 {followers?.map(followers => <Follower key={followers.id} followers={followers} />)}
-                {(data.length != 0 && data.length == 50) && <button onClick={loadFollowers}>
+                {(data.length != 0 && data.length == process.env.NEXT_PUBLIC_FOLLOWERS_PER_PAGE) && <button onClick={loadFollowers}>
                     {isFetching ? "Fetching..." : "Go on"}
                 </button>}
             </div>}

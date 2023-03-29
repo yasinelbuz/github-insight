@@ -1,22 +1,28 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@react-hook/media-query': ^1.1.1
   '@reduxjs/toolkit': ^1.9.3
   fusioncharts: ^3.19.0
   next: 13.2.4
   react: 18.2.0
   react-dom: 18.2.0
   react-fusioncharts: ^4.0.0
+  react-hook: ^0.0.1
+  react-icons: ^4.8.0
   react-redux: ^8.0.5
   sass: ^1.59.3
 
 dependencies:
+  '@react-hook/media-query': 1.1.1_react@18.2.0
   '@reduxjs/toolkit': 1.9.3_k4ae6lp43ej6mezo3ztvx6pykq
   fusioncharts: 3.20.0
   next: 13.2.4_dpxg4zawgzznnxdt7it3f5d76m
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-fusioncharts: 4.0.0_react@18.2.0
+  react-hook: 0.0.1
+  react-icons: 4.8.0_react@18.2.0
   react-redux: 8.0.5_biqbaboplfbrettd7655fr4n2y
   sass: 1.59.3
 
@@ -242,6 +248,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@react-hook/media-query/1.1.1_react@18.2.0:
+    resolution: {integrity: sha512-VM14wDOX5CW5Dn6b2lTiMd79BFMTut9AZj2+vIRT3LCKgMCYmdqruTtzDPSnIVDQdtxdPgtOzvU9oK20LopuOw==}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@reduxjs/toolkit/1.9.3_k4ae6lp43ej6mezo3ztvx6pykq:
     resolution: {integrity: sha512-GU2TNBQVofL09VGmuSioNPQIu6Ml0YLf4EJhgj0AvBadRlCGzUWet8372LjvO4fqKZF2vH1xU0htAa7BrK9pZg==}
@@ -635,6 +649,18 @@ packages:
     dependencies:
       react: 18.2.0
       uuid: 3.4.0
+    dev: false
+
+  /react-hook/0.0.1:
+    resolution: {integrity: sha512-2/Guf88/dGyFgUT7QDtBJ1l7V5yqTcAHlNRIZNTu2xg0KkDjaiYZp79ah49NDaLMI/J7voWcKLU8wMONG4A/1g==}
+    dev: false
+
+  /react-icons/4.8.0_react@18.2.0:
+    resolution: {integrity: sha512-N6+kOLcihDiAnj5Czu637waJqSnwlMNROzVZMhfX68V/9bu9qHaMIJC4UdozWoOk57gahFCNHwVvWzm0MTzRjg==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /react-is/16.13.1:

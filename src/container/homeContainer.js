@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import StatsCard from '@/components/card/StatsCard';
-import Search from '@/components/search/Search';
 import Profile from '@/components/profile/Profile';
 const NextFusionCharts = dynamic(
     () => import('@/components/fusioncharts/NextFusionChart'),
@@ -10,7 +9,6 @@ const NextFusionCharts = dynamic(
 );
 import { useGetGithubUserByNameQuery, useGetGithubUserByFollowersQuery, useGetGithubUserByReposQuery } from '@/services/githubUser';
 import { useSelector } from 'react-redux';
-import Header from '@/components/header/Header';
 
 export default function HomeContainer() {
     const { searchUser } = useSelector((state) => state.users);
@@ -30,7 +28,6 @@ export default function HomeContainer() {
             </Head>
 
             {!isLoading && <main>
-                <Header />
                 <StatsCard data={data} />
                 <Profile data={data} />
                 <NextFusionCharts reposData={reposData} />
