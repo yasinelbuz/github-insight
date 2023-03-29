@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Table from "@/components/table/table";
-import styles from '@/components/table/table.module.scss'
 import { useGetGithubUserByReposQuery } from "@/services/users";
 import { useSelector } from "react-redux";
 

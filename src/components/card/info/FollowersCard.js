@@ -10,23 +10,30 @@ const FollowersCard = () => {
 
     const { search, followers, page } = useSelector(state => state.users)
     const { data, isLoading, isFetching, isSuccess } = useGetGithubUserByFollowersQuery({ name: search, page }, {
+        //triggering every time the search and page arg changes
         refetchOnMountOrArgChange: true,
     });
-    const changePageNumber = () => {
-        if (isSuccess) {
-            dispatch(setPage(1))
-        }
-    }
+
+    const changePageNumber = () => isSuccess && dispatch(setPage(1))
+
+    const checkData = (data) => data?.length != 0 && data?.length == process.env.NEXT_PUBLIC_FOLLOWERS_PER_PAGE
+
+    const button = <button onClick={changePageNumber}>
+        {isFetching ? "Fetching..." : "Go on"}
+    </button>
+
+    const followersMap = followers?.map(follower => <Follower key={follower.id} followers={follower} />)
+
+    const loadingDiv = <div style={{ textAlign: "center" }}>Loading...</div>
+
+    const followersDiv = <div className={styles.followers}>
+        {followersMap}
+        {checkData(data) ? button : "Gösterilecek başka kullanıcı kalmadı..."}
+    </div>
 
     return (
         <div className={`${styles.card} ${styles['followers-card']}`}>
-            {!isLoading && <div className={styles.followers}>
-                {followers?.map(followers => <Follower key={followers.id} followers={followers} />)}
-                {(data.length != 0 && data.length == process.env.NEXT_PUBLIC_FOLLOWERS_PER_PAGE) && <button onClick={changePageNumber}>
-                    {isFetching ? "Fetching..." : "Go on"}
-                </button>}
-            </div>}
-            {isLoading && <div style={{ textAlign: "center" }}>Loading...</div>}
+            {!isLoading ? followersDiv : loadingDiv}
         </div >
     );
 };
