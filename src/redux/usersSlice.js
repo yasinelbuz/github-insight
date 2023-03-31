@@ -4,7 +4,9 @@ import { usersApi } from '@/services/users';
 const initialState = {
    search: "yasinelbuz",
    followers: [],
-   page: 1,
+   following: [],
+   followerPage: 1,
+   followingPage: 1,
 }
 
 export const usersSlice = createSlice({
@@ -14,13 +16,21 @@ export const usersSlice = createSlice({
       setSearch: function (state, action) {
          state.search = action.payload;
          state.followers = [];
-         state.page = 1;
+         state.following = [];
+         state.followerPage = 1;
+         state.followingPage = 1;
       },
-      setItems: function (state, action) {
+      setFollowers: function (state, action) {
          state.followers = action.payload;
       },
-      setPage: function (state, action) {
-         state.page += action.payload;
+      setFollowing: function (state, action) {
+         state.following = action.payload;
+      },
+      setFollowerPage: function (state, action) {
+         state.followerPage += action.payload;
+      },
+      setFollowingPage: function (state, action) {
+         state.followingPage += action.payload;
       },
    },
    extraReducers: (builder) => {
@@ -30,10 +40,16 @@ export const usersSlice = createSlice({
             state.followers = [...state.followers, ...action.payload];
          }
       );
+      builder.addMatcher(
+         usersApi.endpoints.getGithubUserByFollowing.matchFulfilled,
+         (state, action) => {
+            state.following = [...state.following, ...action.payload];
+         }
+      );
    },
 })
 
 // Action creators are generated for each case reducer function
-export const { setSearch, setItems, setPage } = usersSlice.actions
+export const { setSearch, setFollowers, setFollowing, setFollowerPage, setFollowingPage } = usersSlice.actions
 
 export default usersSlice.reducer

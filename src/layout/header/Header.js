@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from './header.module.scss';
 import Search from "@/components/search/Search";
 import Link from "next/link";
@@ -6,9 +6,13 @@ import { useGetRateLimitQuery } from "@/services/rate";
 
 export default function Header() {
 
+   // const { search, followers, page } = useSelector((state) => state.users);
    const { data, isLoading } = useGetRateLimitQuery();
 
-   console.log(process.env.NEXT_PUBLIC_DENEME);
+   //REFACTOR bu kod değişebilir
+   /*useEffect(() => {
+      setRate({ remaining: data?.rate?.remaining, limit: data?.rate?.limit });
+   }, [search, followers, page])*/
 
    return <>
       <header className={styles.header}>
@@ -17,14 +21,14 @@ export default function Header() {
                <nav className={styles.navigation}>
                   <Link href="/">Home</Link>
                   <Link href="/repos">Repos</Link>
-                  <Link href="/repos">Follower</Link>
-                  <Link href="/repos">Following</Link>
-                  <Link href="/repos">Non-Followers</Link>
+                  <Link href="/non-followers">Non-Followers</Link>
                </nav>
             </div>
          </div>
          <Search />
-         {!isLoading && <div style={{ position: "absolute", left: 0, top: 0, fontSize: "2rem", backgroundColor: "#fff" }}> {data?.rate?.remaining}/{data?.rate?.limit} istek kaldı</div>}
+         {!isLoading && <div style={{ position: "absolute", left: 0, top: 0, fontSize: "2rem", backgroundColor: "#fff" }}>
+            {data?.rate?.remaining}/{data?.rate?.limit} istek kaldı
+         </div>}
       </header >
    </>
 }

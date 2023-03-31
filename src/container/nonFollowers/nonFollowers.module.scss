@@ -1,0 +1,25 @@
+.nonfollowers__container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+	grid-gap: 2rem;
+	gap: 2rem;
+
+	& > div {
+		background-color: #fff;
+		padding: 10px;
+		border-radius: 10px;
+		height: 400px;
+		overflow-y: auto;
+	}
+}
+
+.box {
+	display: flex;
+}
+
+.avatar__url {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
