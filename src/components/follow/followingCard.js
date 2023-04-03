@@ -29,14 +29,7 @@ export default function FollowingCard({ nonFollower }) {
       {isFetching ? "Fetching..." : "Go on"}
    </button>
 
-   let followersMap = null;
-   console.log(nonFollower);
-   if (nonFollower) {
-      followersMap = nonFollower?.map(item => <FollowItem key={item.id} item={item} />)
-   }
-   else {
-      followersMap = following?.map(item => <FollowItem key={item.id} item={item} />)
-   }
+   const followersMap = following?.map(item => <FollowItem key={item.id} item={item} />)
 
    const bottomBar = checkData(data) ? button : <NoUserMessage />
 
