@@ -6,13 +6,13 @@ import { fetchAllFollowersData, fetchAllFollowingData } from "@/helper/getAllDat
 
 export default function NonFollowersCard() {
 
-   // const { search } = useSelector((state) => state.users);
+   const { search } = useSelector((state) => state.users);
    const [followers, setFollowers] = useState();
    const [following, setFollowing] = useState();
 
    useEffect(() => {
-      fetchAllFollowersData().then(data => setFollowers(data));
-      fetchAllFollowingData().then(data => setFollowing(data));
+      fetchAllFollowersData(search).then(data => setFollowers(data));
+      fetchAllFollowingData(search).then(data => setFollowing(data));
    }, []);
 
    const nonFollower = following?.filter((user) => {
