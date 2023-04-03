@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FollowItem from "./FollowItem";
 import { useSelector } from "react-redux";
 import styles from './style.module.scss';
+import { fetchAllFollowersData, fetchAllFollowingData } from "@/helper/getAllData";
 
 export default function NonFollowersCard() {
 
-   const { followers, following } = useSelector((state) => state.users);
+   // const { search } = useSelector((state) => state.users);
+   const [followers, setFollowers] = useState();
+   const [following, setFollowing] = useState();
 
-   const nonFollower = following.filter((user) => {
-      return !followers.some((follower) => {
+   useEffect(() => {
+      fetchAllFollowersData().then(data => setFollowers(data));
+      fetchAllFollowingData().then(data => setFollowing(data));
+   }, []);
+
+   const nonFollower = following?.filter((user) => {
+      return !followers?.some((follower) => {
          return follower.id === user.id;
       });
-   })
+   });
 
    return <div className={styles.follow__card}>
-      {nonFollower?.map(item => <FollowItem key={item.id} item={item} />)}
+      {nonFollower?.map((item, id) => <FollowItem key={id} item={item} />)}
    </div>
 }
