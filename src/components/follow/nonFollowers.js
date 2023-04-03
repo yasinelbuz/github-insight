@@ -13,7 +13,7 @@ export default function NonFollowersCard() {
    useEffect(() => {
       fetchAllFollowersData(search).then(data => setFollowers(data));
       fetchAllFollowingData(search).then(data => setFollowing(data));
-   }, []);
+   }, [search]);
 
    const nonFollower = following?.filter((user) => {
       return !followers?.some((follower) => {
