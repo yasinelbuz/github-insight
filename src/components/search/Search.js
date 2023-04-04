@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { SearchIcon } from '@/icons/icons.js';
+import { SearchIcon } from '@/icons/index.js';
 import styles from '@/components/search/styles/Search.module.scss';
 import { useDispatch } from 'react-redux';
 import { setSearch } from '@/redux/usersSlice';

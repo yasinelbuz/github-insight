@@ -1,7 +1,7 @@
 import React from 'react';
-import UserCard from './UserCard';
+import UserCard from '@/components/userCard';
 import styles from '@/components/card/info/styles/Profile.module.scss';
-import FollowCard from '@/components/follow/followerCard';
+import FollowerCard from '@/components/follow/followerCard';
 
 
 const Profile = ({ data }) => {
@@ -12,7 +12,7 @@ const Profile = ({ data }) => {
                     <UserCard data={data} />
                 </div>
                 <div style={{ height: "400px", backgroundColor: "#fff", marginTop: "10px", overflow: "auto", padding: "20px" }}>
-                    <FollowCard />
+                    <FollowerCard />
                 </div>
             </div>
         </section >

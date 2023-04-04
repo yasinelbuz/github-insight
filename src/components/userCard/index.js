@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '@/components/card/info/styles/Profile.module.scss';
-import { Company, LinkIcon, Location } from '@/icons/icons';
+import styles from './styles.module.scss';
+import { Company, LinkIcon, Location } from '@/icons';
 
 const UserCard = ({ data }) => {
 

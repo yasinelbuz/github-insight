@@ -1,6 +1,6 @@
 import React from 'react';
 import StatsCardItem from './StatsCartdtem';
-import { Repos, Followers, Following, Gists } from '@/icons/icons'
+import { Repos, Followers, Following, Gists } from '@/icons'
 import styles from '@/components/card/stats/styles/StatsCard.module.scss'
 
 const StatsCard = ({ data }) => {
