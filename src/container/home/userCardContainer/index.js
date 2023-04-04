@@ -1,12 +1,10 @@
 import React from "react";
-import FollowerCard from '@/components/follow/followerCard';
+import UserCard from '@/components/userCard';
 
-export default function UserCardContainer() {
+export default function UserCardContainer({ data }) {
    return <section>
       <div className="container">
-         <div style={{ height: "400px", backgroundColor: "#fff", marginTop: "10px", overflow: "auto", padding: "20px" }}>
-            <FollowerCard />
-         </div>
+         <UserCard data={data} />
       </div>
    </section>
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import FollowerCard from '@/components/follow/followerCard';
+import UserCard from "@/components/userCard";
+import { FollowerCard } from "@/components/follow";
 
 export default function FollowerCardContainer() {
    return <section>
@@ -8,5 +9,5 @@ export default function FollowerCardContainer() {
             <FollowerCard />
          </div>
       </div>
-   </section>
+   </section >
 }
