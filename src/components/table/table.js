@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaSortDown, FaSortUp, FaSort } from "react-icons/fa"
-import { useMediaQuery, useMediaQueries } from '@react-hook/media-query'
+import { useMediaQuery } from '@react-hook/media-query'
 import TableMobile from "./table-mobile";
 import styles from './table.module.scss';
 
@@ -8,6 +8,13 @@ import styles from './table.module.scss';
 export default function Table({ head, body, searchable }) {
 
    const isMobile = useMediaQuery('(max-width: 600px)')
+
+   function compareNumeric(a, b) {
+      if (a > b) return 1;
+      if (a == b) return 0;
+      if (a < b) return -1;
+   }
+
 
    const [sorting, setSorting] = useState(false)
    const [search, setSearch] = useState('')
@@ -17,9 +24,15 @@ export default function Table({ head, body, searchable }) {
       )
    ).sort((a, b) => {
       if (sorting?.orderBy === 'asc') {
+         if (typeof b[sorting.key] === "number") {
+            return a[sorting.key] - b[sorting.key];
+         }
          return (a[sorting.key]?.key || a[sorting.key]?.props?.searchableText || a[sorting.key]).toString().localeCompare(b[sorting.key]?.key || b[sorting.key]?.props?.searchableText || b[sorting.key])
       }
       if (sorting?.orderBy === 'desc') {
+         if (typeof b[sorting.key] === "number") {
+            return b[sorting.key] - a[sorting.key];
+         }
          return b[sorting.key].toString().localeCompare(a[sorting.key])
       }
    })
