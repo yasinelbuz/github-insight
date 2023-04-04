@@ -7,12 +7,11 @@ import { useGetRateLimitQuery } from "@/services/rate";
 export default function Header() {
 
    // const { search, followers, page } = useSelector((state) => state.users);
-   const { data, isLoading } = useGetRateLimitQuery();
+   const { data, isLoading, refetch } = useGetRateLimitQuery();
 
-   //REFACTOR bu kod değişebilir
-   /*useEffect(() => {
-      setRate({ remaining: data?.rate?.remaining, limit: data?.rate?.limit });
-   }, [search, followers, page])*/
+   useEffect(() => {
+      refetch();
+   })
 
    return <>
       <header className={styles.header}>
