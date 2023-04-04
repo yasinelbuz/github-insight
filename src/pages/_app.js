@@ -1,8 +1,16 @@
-import Header from '@/layout/header/Header'
-import Head from 'next/head';
+//styles
+import '@/styles/globals.scss'
+
+//components
+import Header from '@/layout/header'
+import Info from '@/layout/info';
+
+//redux
 import { Provider } from 'react-redux'
 import { store } from '@/redux/store'
-import '@/styles/globals.scss'
+
+//next
+import Head from 'next/head';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -17,6 +25,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Provider store={store}>
+        <Info />
         <Header />
         <Component {...pageProps} />
       </Provider>

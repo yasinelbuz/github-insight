@@ -1,4 +1,3 @@
-import Header from '@/layout/header/Header'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {

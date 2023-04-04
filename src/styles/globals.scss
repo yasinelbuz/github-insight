@@ -14,7 +14,7 @@ html {
 body {
 	font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
 		"Open Sans", "Helvetica Neue", sans-serif;
-	background-color: $bg-clr;
+	background-color: $bg-color;
 	font-weight: 400;
 }
 
@@ -26,7 +26,7 @@ li {
 a {
 	text-decoration: none;
 	font-size: 1.6rem;
-	color: $primary-clr;
+	color: $primary-color;
 }
 
 h1,
@@ -78,7 +78,7 @@ Spinner
 	// margin-top: 10rem;
 	border-radius: 50%;
 	border: 3px solid #ccc;
-	border-top-color: $primary-clr;
+	border-top-color: $primary-color;
 	animation: spinner 0.6s linear infinite;
 }
 

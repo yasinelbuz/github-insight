@@ -34,7 +34,7 @@
 		content: "Followers";
 	}
 	button {
-		background-color: $primary-clr;
+		background-color: $primary-color;
 		color: #fff;
 		border: 0;
 		padding: 1rem;
@@ -73,16 +73,16 @@
 		}
 
 		.follow-link {
-			color: $primary-clr;
+			color: $primary-color;
 			padding: 5px 1.5rem;
-			border: 1px solid $primary-clr;
+			border: 1px solid $primary-color;
 			border-radius: 100px;
 
 			font-size: 1.6rem;
 			text-transform: capitalize;
 
 			&:hover {
-				background-color: $primary-clr;
+				background-color: $primary-color;
 				color: $text-light-clr;
 			}
 		}

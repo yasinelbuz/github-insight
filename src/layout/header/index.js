@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from "react";
-import styles from './header.module.scss';
+//core
+import React, { useEffect } from "react";
+
+//styles
+import styles from './styles.module.scss';
+
+//components
 import Search from "@/components/search/Search";
+
+//next
 import Link from "next/link";
+
+//services
 import { useGetRateLimitQuery } from "@/services/rate";
 
 export default function Header() {
-
-   // const { search, followers, page } = useSelector((state) => state.users);
-   const { data, isLoading, refetch } = useGetRateLimitQuery();
-
-   useEffect(() => {
-      refetch();
-   })
 
    return <>
       <header className={styles.header}>
@@ -25,9 +27,6 @@ export default function Header() {
             </div>
          </div>
          <Search />
-         {!isLoading && <div style={{ position: "absolute", left: 0, top: 0, fontSize: "2rem", backgroundColor: "#fff" }}>
-            {data?.rate?.remaining}/{data?.rate?.limit} istek kaldı
-         </div>}
       </header >
    </>
 }
