@@ -9,13 +9,6 @@ export default function Table({ head, body, searchable }) {
 
    const isMobile = useMediaQuery('(max-width: 600px)')
 
-   function compareNumeric(a, b) {
-      if (a > b) return 1;
-      if (a == b) return 0;
-      if (a < b) return -1;
-   }
-
-
    const [sorting, setSorting] = useState(false)
    const [search, setSearch] = useState('')
    const filteredData = body && body.filter(
