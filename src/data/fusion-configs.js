@@ -7,11 +7,17 @@ export const languageConfigs = {
     dataSource: {
         chart: {
             caption: 'Language',
+            subCaption: "Which language has more repositories?",
             showLegend: '0',
             decimals: '0',
             showPercentValues: '0',
             theme: 'fusion',
             palettecolors: color,
+            "bgColor": "#161B22",
+            "baseFontColor": "#fff",
+            "outCnvBaseFontColor": "#fff",
+            "valueFontColor": "#fff",
+            "baseFontColor": "#000"
         },
     },
 };
@@ -23,6 +29,7 @@ export const starsConfigs = {
     dataSource: {
         chart: {
             caption: 'Most Popular',
+            subCaption: "Which repos got the most stars?",
             showValues: '1',
             xAxisName: 'Repos',
             yAxisName: 'Stars',
@@ -34,6 +41,11 @@ export const starsConfigs = {
             yAxisNameFontColor: '#617d98',
             theme: 'fusion',
             palettecolors: color,
+            "bgColor": "#161B22",
+            "baseFontColor": "#fff",
+            "outCnvBaseFontColor": "#fff",
+            "valueFontColor": "#fff",
+            "baseFontColor": "#000"
         },
     },
 };
@@ -45,6 +57,7 @@ export const starsPerLangConfigs = {
     dataSource: {
         chart: {
             caption: 'Stars Per Language',
+            subCaption: "Which language got more stars?",
             decimals: '0',
             showPercentValues: '0',
             showLegend: '0',
@@ -52,6 +65,11 @@ export const starsPerLangConfigs = {
             yAxisName: 'Stars',
             theme: 'fusion',
             palettecolors: color,
+            "bgColor": "#161B22",
+            "baseFontColor": "#fff",
+            "outCnvBaseFontColor": "#fff",
+            "valueFontColor": "#fff",
+            "baseFontColor": "#000"
         },
     },
 };
@@ -63,6 +81,7 @@ export const forkedReposConfigs = {
     dataSource: {
         chart: {
             caption: 'Most Forked',
+            subCaption: "Which repos are more forked?",
             showValues: '1',
             xAxisName: 'Repos',
             yAxisName: 'Forks',
@@ -71,9 +90,15 @@ export const forkedReposConfigs = {
             xAxisNameFontColor: '#617d98',
             yAxisNameFontSize: '18',
             yAxisNameFontBold: '1',
-            yAxisNameFontColor: '#617d98',
+            yAxisNameFontColor: '#fff',
             theme: 'fusion',
             palettecolors: color,
+            "bgColor": "#161B22",
+            "baseFontColor": "#fff",
+            "outCnvBaseFontColor": "#fff",
+            "valueFontColor": "#fff",
+            "baseFontColor": "#000"
+
         },
     },
 };

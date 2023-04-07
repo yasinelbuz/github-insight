@@ -13,7 +13,8 @@ import {
 
 import { sortData } from '@/helper/sortData';
 import { findLanguageData } from '@/helper/findLanguageData';
-import styles from '@/components/fusioncharts/styles/Charts.module.scss';
+import styles from './styles.module.scss';
+import Title from '../title/title';
 
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
@@ -37,6 +38,7 @@ const NextFusionCharts = ({ reposData }) => {
     return (
         <section>
             <div className="container">
+                <Title h1="Repo Statistics" p="Information about the user's repos" />
                 <div className={styles.chart}>
                     <ReactFC {...languageConfigs} />
                     <ReactFC {...starsConfigs} />
