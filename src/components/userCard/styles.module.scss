@@ -1,47 +1,11 @@
 @import "@/styles/variables";
 
-.profile {
-	display: flex;
-	gap: 2rem;
-	margin-top: 8rem;
-	background-color: $white-clr;
-}
-
 .card {
 	flex: 1;
-	background-color: $white-clr;
-	border-radius: 5px;
+	background-color: #19376d;
+	border-radius: 20px;
 	position: relative;
-
-	&::before {
-		content: "User";
-		height: 4rem;
-		line-height: 4rem;
-		padding: 0 2rem;
-		font-size: 1.8rem;
-		letter-spacing: 1.3px;
-
-		position: absolute;
-		top: -3.7rem;
-		left: 0;
-		background-color: $white-clr;
-		color: $grey-clr;
-	}
-}
-
-.followers-card {
-	&::before {
-		content: "Followers";
-	}
-	button {
-		background-color: $primary-color;
-		color: #fff;
-		border: 0;
-		padding: 1rem;
-		cursor: pointer;
-		border-radius: 3rem;
-		margin-top: 10px;
-	}
+	color: #fff;
 }
 
 .user {
@@ -68,22 +32,8 @@
 			}
 
 			p {
-				color: $grey-clr;
-			}
-		}
-
-		.follow-link {
-			color: $primary-color;
-			padding: 5px 1.5rem;
-			border: 1px solid $primary-color;
-			border-radius: 100px;
-
-			font-size: 1.6rem;
-			text-transform: capitalize;
-
-			&:hover {
-				background-color: $primary-color;
-				color: $text-light-clr;
+				font-size: 1.4rem;
+				color: #fff;
 			}
 		}
 	}
@@ -92,11 +42,19 @@
 		margin-bottom: 3rem;
 	}
 
+	.follow-link {
+		background: #d9d9d9;
+		border-radius: 75px;
+		padding: 10px 30px;
+		color: #000;
+	}
+
 	.user-info {
 		p,
 		a {
 			font-size: 1.6rem;
-			color: $grey-clr;
+			color: rgba(255, 255, 255, 0.815);
+			margin-bottom: 10px;
 
 			svg {
 				margin-right: 8px;
@@ -105,47 +63,7 @@
 	}
 }
 
-.followers {
-	display: flex;
-	flex-direction: column;
-	height: 280px;
-	overflow-y: scroll;
-	padding: 3rem;
-	overscroll-behavior: contain;
-
-	article {
-		display: flex;
-		margin-bottom: 1rem;
-
-		img {
-			width: 5rem;
-			height: 5rem;
-			border-radius: 50%;
-			margin-right: 1.5rem;
-		}
-
-		.followers-info {
-			width: 100%;
-			overflow-x: hidden;
-
-			h4 {
-				font-size: 1.8rem;
-				letter-spacing: 1.2px;
-				margin-bottom: 2px;
-			}
-			a {
-				font-size: 1.6rem;
-				color: $grey-clr;
-			}
-		}
-	}
-}
-
 @media (max-width: 900px) {
-	.profile {
-		flex-direction: column;
-	}
-
 	.card {
 		margin-bottom: 4rem;
 	}

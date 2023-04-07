@@ -7,7 +7,6 @@ const NextFusionCharts = dynamic(
 );
 import { useGetGithubUserByNameQuery, useGetGithubUserByReposQuery } from '@/services/users';
 import { useSelector } from 'react-redux';
-import UserCardContainer from './userCardContainer';
 import FollowerCardContainer from './followerCardContainer';
 import { fetchAllReposData } from '@/helper/getAllData';
 
@@ -27,8 +26,7 @@ export default function HomeContainer() {
         <>
             {!isLoading && <main>
                 <StatsCard data={data} />
-                <UserCardContainer data={data} />
-                <FollowerCardContainer />
+                <FollowerCardContainer data={data} />
                 <NextFusionCharts reposData={repos} />
             </main>}
         </>

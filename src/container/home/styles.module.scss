@@ -1,0 +1,38 @@
+.cards__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+}
+
+.follower__container {
+	margin-top: 20px;
+	height: 400px;
+	overflow: auto;
+	background-color: #19376d;
+	border-radius: 20px;
+	padding: 20px;
+	overscroll-behavior: contain;
+
+	/* width */
+	&::-webkit-scrollbar {
+		width: 8px;
+		border-radius: 50%;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: #efefef;
+		border-radius: 20px;
+		padding: 1px;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: #333;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: #111;
+	}
+}

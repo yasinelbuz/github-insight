@@ -1,68 +1,59 @@
-@import '@/styles/_variables';
+@import "@/styles/_variables";
 
 .stats-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    gap: 2rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+	gap: 2rem;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-.stats-card {
-    background-color: $white-clr;
-    padding: 1.5rem;
-    border-radius: 5px;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+.stats__card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 132px;
+	border-radius: 20px;
+	padding: 1.5rem;
+	background-color: $bg_color_blue;
 
-    .icon {
-        padding: 10px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+	.stats__inner {
+		display: flex;
+		align-items: flex-start;
+		justify-items: center;
+	}
 
-        svg {
-            width: 100%;
-            height: 100%;
-            width: 2.4rem;
-            height: 2.4rem;
-        }
-    }
+	.icon {
+		padding: 10px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    .repos {
-        color: #da4a91;
-        background-color: #ffe0f0;
-    }
+		svg {
+			width: 5rem;
+			height: 5rem;
+			color: #fff;
+		}
+	}
 
-    .followers {
+	.info {
+		width: 100%;
+		text-align: center;
+		color: #fff;
 
-        color: #2caeba;
-        background-color: #e6e6ff;
-    }
-
-    .following {
-        color: #5d55fa;
-        background-color: #e6e6ff;
-    }
-
-    .gists {
-        color: #f0b429;
-        background-color: #fffbea;
-    }
-
-    .info {
-        width: 100%;
-        text-align: center;
-
-        h3 {
-            font-size: 2.8rem;
-        }
-    }
+		h3 {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 64px;
+			line-height: 90.02%;
+		}
+	}
 }
 
 @media (max-width: 900px) {
-    .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.stats-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
