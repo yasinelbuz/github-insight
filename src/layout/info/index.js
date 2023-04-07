@@ -23,12 +23,14 @@ export default function Info() {
 
    return (<>
       <header className={styles.header}>
-         <div className={styles.rate}>
-            My remaining request count is <b>{remaining}</b> out of <b>{limit}</b>
-         </div>
-         <div>
-            <a href={process.env.NEXT_PUBLIC_PROJECT_GITHUB_URL} target="_blank" className={styles.star_github_btn}><StarIcon /> Star on Github</a>
-         </div>
+         <section>
+            <div className={styles.rate}>
+               My remaining request count is <b>{remaining}</b> out of <b>{limit}</b>
+            </div>
+            <div>
+               <a href={process.env.NEXT_PUBLIC_PROJECT_GITHUB_URL} target="_blank" className={styles.star_github_btn}><StarIcon /> Star on Github</a>
+            </div>
+         </section>
       </header>
    </>);
 }

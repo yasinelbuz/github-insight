@@ -1,41 +1,104 @@
 @import "@/styles/_variables";
 
 .header {
-	background-image: url("https://images.pexels.com/photos/14178741/pexels-photo-14178741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: #dae4ed;
-	padding: 10rem;
-	margin-bottom: 4rem;
+	background-color: #1f262f;
 	position: relative;
+	box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
 
-	&:after {
-		content: "";
-		position: absolute;
-		inset: 0;
-		background-color: rgba(0, 0, 0, 0.2);
-		background: linear-gradient(0deg, rgba(0, 0, 0, 0.8979166666666667) -10%, rgba(255, 255, 255, 0) 60%);
-		z-index: 0;
+	section {
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
-	nav.navigation {
-		position: relative;
-		z-index: 1;
+	.sidebar__left {
 		display: flex;
-		gap: 1rem;
-		margin-bottom: 1rem;
-		a {
-			background-color: $primary-color;
-			padding: 0.5rem 1rem;
-			font-size: 1.4rem;
-			border-radius: 2rem;
-			color: #fff;
-			&:hover {
-				background-color: $hover-clr;
-				padding: 5px 10px;
-				border-radius: 20px;
+		align-items: center;
+
+		.logo {
+			cursor: pointer;
+		}
+
+		nav.navigation {
+			display: flex;
+			gap: 1.5rem;
+			a {
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 17px;
+				color: #ffffff;
 			}
+		}
+
+		.hamburger__icon {
+			display: none;
+			width: 24px;
+			cursor: pointer;
+			margin-right: 5px;
+
+			svg {
+				color: #fff;
+			}
+		}
+	}
+
+	.sidebar__right {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		color: #fff;
+		font-size: 1.5rem;
+		font-weight: bold;
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+		}
+	}
+}
+
+.mobile__menu {
+	width: 100%;
+	background-color: $bg-color_2;
+	margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 951px) {
+	.mobile__menu {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.header .sidebar__left nav.navigation {
+		display: none;
+	}
+
+	.header .sidebar__left .serach__box {
+		display: none;
+	}
+
+	.header .sidebar__left .hamburger__icon {
+		display: block;
+	}
+
+	.mobile__menu {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	.mobile__menu .navigation {
+		display: flex;
+		flex-direction: column;
+		justify-items: center;
+
+		a {
+			background-color: #1f262f;
+			margin-top: 10px;
+			padding: 10px;
+			border-radius: 20px;
+			text-align: center;
 		}
 	}
 }
