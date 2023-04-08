@@ -1,34 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
-import StatsCard from '@/components/stats/StatsCard';
-const NextFusionCharts = dynamic(
-    () => import('@/components/fusioncharts/FusionChart'),
-    { ssr: false }
-);
-import { useGetGithubUserByNameQuery, useGetGithubUserByReposQuery } from '@/services/users';
-import { useSelector } from 'react-redux';
-import FollowerCardContainer from './followerCardContainer';
-import { fetchAllReposData } from '@/helper/getAllData';
+import React from "react";
+import Hero from "./hero";
 
 export default function HomeContainer() {
-
-    const [repos, setRepos] = useState();
-    const { search } = useSelector((state) => state.users);
-    const { data, isLoading } = useGetGithubUserByNameQuery(search);
-
-
-    useEffect(() => {
-        fetchAllReposData(search).then(data => setRepos(data));
-    }, [search]);
-
-
-    return (
-        <>
-            {!isLoading && <main>
-                <StatsCard data={data} />
-                <FollowerCardContainer data={data} />
-                <NextFusionCharts reposData={repos} />
-            </main>}
-        </>
-    );
+   return (<>
+      <Hero />
+   </>);
 }

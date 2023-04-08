@@ -1,6 +1,6 @@
 import React from "react";
 import { FollowerCard } from "@/components/follow";
-import styles from '@/container/home/styles.module.scss';
+import styles from '@/container/dashboard/styles.module.scss';
 import Title from "@/components/title/title";
 import UserCard from "@/components/userCard";
 

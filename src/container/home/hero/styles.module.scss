@@ -1,0 +1,58 @@
+.hero_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 100px);
+
+	.hero_container_inner {
+		position: relative;
+		width: 600px;
+	}
+
+	h1,
+	p {
+		text-align: center;
+	}
+
+	h1 {
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 77px;
+		color: rgba(138, 144, 200, 0.86);
+	}
+
+	p {
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 70px;
+		text-align: center;
+		color: #ffffff;
+	}
+
+	.blockChart,
+	.chart,
+	.greenOk,
+	.okDown {
+		position: absolute;
+	}
+
+	.blockChart {
+		right: -50px;
+		top: -60px;
+	}
+
+	.chart {
+		left: 100px;
+		bottom: -50px;
+	}
+
+	.greenOk {
+		left: -100px;
+		top: -50px;
+	}
+
+	.okDown {
+		right: 0px;
+		bottom: -100px;
+	}
+}
