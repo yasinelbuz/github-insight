@@ -4,6 +4,7 @@ import blockChart from '@/assets/block-chart.png'
 import chart from '@/assets/chart.png'
 import greenOk from '@/assets/green-ok.png'
 import okDown from '@/assets/ok-down.png'
+import Search from "@/components/search";
 
 export default function Hero() {
 
@@ -19,10 +20,13 @@ export default function Hero() {
                   <img src={greenOk.src} className={styles.greenOk} />
                   <img src={okDown.src} className={styles.okDown} />
                   <h1>Explore Your GitHub</h1>
-                  <p><b>Analyze</b>, <b>Refine</b>, and <b>Boost</b> <br /> Your Github Account.</p>
+                  <Search style={{
+                     width: "100%", border: "1px solid #fff"
+                  }} />
+                  < p > <b>Analyze</b>, < b > Refine</b>, and <b>Boost</b> <br /> Your Github Account.</p>
                </div>
             </div>
-         </div>
-      </section>
+         </div >
+      </section >
    </>;
 }
