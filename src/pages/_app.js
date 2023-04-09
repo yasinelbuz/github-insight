@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Github Info</title>
+        <title>Github Insight</title>
         <meta name="description" content="Find github user info" />
         <meta
           name="viewport"
