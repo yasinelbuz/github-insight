@@ -1,6 +1,6 @@
-# Github Info
+# Github Insight
 
-_"Github Info”_
+_"Github Insight”_
 
 They can view their profile information, number of followers and followed users, public and private projects, repo names, star ratings, and recent activity on GitHub.
 
@@ -36,8 +36,8 @@ http://localhost:3000
 
 ## Links
 
--   [Github](https://github.com/yasinelbuz/github-info)
--   [Deployment](https://github-info-y4jz.vercel.app/)
+-   [Github](https://github.com/yasinelbuz/github-insight)
+-   [Deployment](https://githubinsight.vercel.app/)
 
 ## Contact
 
