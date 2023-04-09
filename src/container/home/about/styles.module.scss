@@ -1,0 +1,29 @@
+.about__section {
+	background-color: #010101;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	.container__inner {
+		width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h2,
+	p {
+		text-align: center;
+		color: #ffffffd7;
+	}
+
+	h2 {
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 222.52%;
+	}
+
+	p {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 222.52%;
+	}
+}
