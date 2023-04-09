@@ -14,4 +14,31 @@
 			line-height: 140%;
 		}
 	}
+
+	.section__right {
+		.open__source {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		a {
+			display: flex;
+			flex-direction: column;
+			color: #fff;
+
+			img {
+				width: 24px;
+			}
+		}
+
+		a {
+		}
+
+		& > div {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+		}
+	}
 }
