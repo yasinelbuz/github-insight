@@ -10,6 +10,6 @@ export default function Navigation() {
       <Link href="/dashboard">Dashboard</Link>
       <Link href="/repos">Repos</Link>
       <Link href="/non-followers">Non-Followers</Link>
-      <Link href="/non-followers">Rate</Link>
+      <Link href="/rate">Rate</Link>
    </nav>;
 }
