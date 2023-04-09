@@ -4,8 +4,10 @@ import { FollowerCard, FollowingCard, NonFollowersCard } from '@/components/foll
 
 export default function NonFollowersContainer() {
    return <main>
-      <section>
+      <section className={styles.section_container}>
          <div className="container">
+            <h1>Non-Followers</h1>
+            <p>Github Follower Analysis: This page shows follower and following statistics related to your Github account. The list you see on the page consists of non-followers, which are obtained by taking the difference between your followers and following lists.</p>
             <section>
                <div className={styles.nonfollowers__container}>
                   <div className={styles.follower}>

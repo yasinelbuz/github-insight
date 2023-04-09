@@ -11,6 +11,7 @@
 	display: flex;
 	margin-bottom: 1rem;
 	column-gap: 0.5rem;
+	margin-top: 5rem;
 
 	input {
 		padding: 1.8rem 1.8rem;
@@ -37,20 +38,23 @@
 	}
 }
 
-.table-container {
+.table__container {
 	width: 100%;
 	border-radius: 0.25rem;
 	border-width: 1px;
 	font-size: 1.4rem;
-
+	margin-top: 2rem;
+	color: #fff;
 	table {
 		width: 100%;
+		border-collapse: collapse;
 	}
 
 	th {
+		margin: 5px;
 		padding: 1rem;
-		background-color: #f9fafb;
-		color: #000;
+		background-color: #343f50;
+		color: #fff;
 		line-height: 1.25rem;
 		font-weight: 600;
 		text-align: left;
@@ -58,6 +62,7 @@
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 		margin-right: 10px;
+		border: 1px solid #000000;
 
 		div {
 			width: 100%;
@@ -69,10 +74,10 @@
 	}
 	tbody {
 		tr {
-			background-color: #fff;
+			background-color: transparent;
 			transition: all 0.05s;
 			&:hover {
-				background-color: #ffdfb4c1;
+				background-color: #343f50;
 			}
 
 			&:last-child {
@@ -83,11 +88,16 @@
 			}
 
 			td {
-				padding: 1.2rem;
+				padding: 1rem;
 				line-height: 2rem;
+				border: 1px solid #343f50;
 				div {
 					display: flex;
 					column-gap: 0.625rem;
+				}
+
+				a {
+					color: #fff;
 				}
 			}
 		}

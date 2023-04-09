@@ -57,7 +57,7 @@ export default function Table({ head, body, searchable }) {
          )}
          {isMobile && <TableMobile head={head} body={filteredData} />}
          {!isMobile && (
-            <div className={styles["table-container"]}>
+            <div className={styles.table__container}>
                <table>
                   <thead>
                      <tr>
@@ -109,8 +109,9 @@ export default function Table({ head, body, searchable }) {
                      ))}
                   </tbody>
                </table>
-            </div>
-         )}
+            </div >
+         )
+         }
       </>
    )
 }
