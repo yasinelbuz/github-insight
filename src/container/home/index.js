@@ -9,6 +9,5 @@ export default function HomeContainer() {
       <Hero />
       <About />
       <Feature />
-      <Footer />
    </>);
 }

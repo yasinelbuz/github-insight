@@ -4,6 +4,7 @@ import '@/styles/globals.scss'
 //components
 import Header from '@/layout/header'
 import Info from '@/layout/info';
+import Footer from '@/layout/footer';
 
 //redux
 import { Provider } from 'react-redux'
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }) {
         <Info />
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </Provider>
     </>
   )
