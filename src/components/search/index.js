@@ -11,15 +11,22 @@ import { setSearch } from '@/redux/usersSlice';
 //icons
 import { SearchIcon } from '@/icons/index.js';
 
+//next
+import { useRouter } from 'next/router';
+
 
 export default function Search(props) {
     const dispatch = useDispatch();
     const searchRef = useRef();
+    const router = useRouter();
 
     const handleSearch = (e) => {
         e.preventDefault();
         let searchValue = searchRef.current.value;
-        searchValue.trim() && dispatch(setSearch(searchValue.trim()));
+        if (searchValue.trim()) {
+            dispatch(setSearch(searchValue.trim()));
+            router.push('/dashboard');
+        }
     };
 
     return (
